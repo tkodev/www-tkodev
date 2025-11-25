@@ -1,6 +1,6 @@
+import { fromZonedTime } from 'date-fns-tz'
 import { appTimeZone } from '@/constants/date'
 import { JobEntry } from '@/types/job'
-import { fromZonedTime } from 'date-fns-tz'
 
 const jobEntries: JobEntry[] = [
   {

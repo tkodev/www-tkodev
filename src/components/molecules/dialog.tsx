@@ -3,20 +3,20 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { XIcon } from 'lucide-react'
 import { ComponentPropsWithoutRef, ElementRef, forwardRef, HTMLAttributes } from 'react'
+import { VariantProps } from 'class-variance-authority'
 import { Button } from '@/components/atoms/button'
 import { Icon } from '@/components/atoms/icon'
 import { textStyles } from '@/constants/theme'
 import { cn, cva } from '@/utils/theme'
-import { VariantProps } from 'class-variance-authority'
 
 const styles = {
   dialogOverlay: cva(
-    'fixed inset-0 z-50 bg-black/30 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
+    'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/30'
   ),
-  dialogContent: cva('fixed left-[50%] top-[50%] z-50 w-full -translate-x-1/2 -translate-y-1/2', {
+  dialogContent: cva('fixed top-[50%] left-[50%] z-50 w-full -translate-x-1/2 -translate-y-1/2', {
     variants: {
       isAnimated: {
-        true: 'duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]',
+        true: 'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] duration-200',
         false: ''
       }
     },
@@ -24,7 +24,7 @@ const styles = {
       isAnimated: false
     }
   }),
-  dialogClose: cva('absolute right-4 top-4'),
+  dialogClose: cva('absolute top-4 right-4'),
   dialogHeader: cva('flex flex-col space-y-1.5'),
   dialogFooter: cva('flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'),
   dialogDescription: cva('')

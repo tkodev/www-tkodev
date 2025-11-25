@@ -7,7 +7,7 @@ import { Icon } from '../atoms/icon'
 
 const styles = {
   root: cva('flex items-center gap-2'),
-  icon: cva('hidden xs:block')
+  icon: cva('xs:block hidden')
 }
 
 type NavRef = HTMLDivElement

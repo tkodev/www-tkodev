@@ -1,8 +1,8 @@
 import { forwardRef, HTMLAttributes } from 'react'
-import { Bg } from '@/components/atoms/bg'
-import { Cursor } from '@/components/atoms/cursor'
-import { Footer } from '@/components/organisms/footer'
-import { Header } from '@/components/organisms/header'
+import { Base } from '@/components/sections/base'
+import { Footer } from '@/components/sections/footer'
+import { Header } from '@/components/sections/header'
+import { Overlay } from '@/components/sections/overlay'
 import { cn, cva, type VariantProps } from '@/utils/theme'
 
 const styles = {
@@ -17,11 +17,11 @@ const Layout = forwardRef<LayoutRef, LayoutProps>((props, ref) => {
 
   return (
     <div ref={ref} className={cn(styles.root({ className }))} {...rest}>
+      <Base />
       <Header />
       {children}
       <Footer />
-      <Bg size="repeat" variant="noise" overlay />
-      <Cursor />
+      <Overlay />
     </div>
   )
 })

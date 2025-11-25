@@ -17,7 +17,7 @@ const styles = {
   root: cva(''),
   content: cva([
     'h-full w-full lg:max-h-[90%] lg:max-w-[90%]',
-    'border bg-background shadow-lg',
+    'bg-background border shadow-lg',
     'grid grid-rows-[auto_1fr_auto]'
   ]),
 
@@ -36,17 +36,17 @@ const styles = {
   }),
 
   left: cva('flex min-h-0 min-w-0 items-center justify-center p-8'),
-  right: cva('border-t p-8 md:border-l md:border-t-0')
+  right: cva('border-t p-8 md:border-t-0 md:border-l')
 }
 
-type LightboxRef = HTMLButtonElement
-type LightboxProps = HTMLAttributes<LightboxRef> &
+type DialogMediaRef = HTMLButtonElement
+type DialogMediaProps = HTMLAttributes<DialogMediaRef> &
   VariantProps<typeof styles.root> &
   DialogProps & {
     mediaEntry: MediaEntry
   }
 
-const Lightbox = forwardRef<LightboxRef, LightboxProps>((props, ref) => {
+const DialogMedia = forwardRef<DialogMediaRef, DialogMediaProps>((props, ref) => {
   const { mediaEntry, className, children, ...rest } = props
   const { alt } = mediaEntry
 
@@ -71,7 +71,7 @@ const Lightbox = forwardRef<LightboxRef, LightboxProps>((props, ref) => {
     </Dialog>
   )
 })
-Lightbox.displayName = 'Lightbox'
+DialogMedia.displayName = 'DialogMedia'
 
-export { Lightbox }
-export type { LightboxProps, LightboxRef }
+export { DialogMedia }
+export type { DialogMediaProps, DialogMediaRef }

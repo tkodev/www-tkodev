@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import {
-  ArchiveIcon,
   BracesIcon,
+  DraftingCompassIcon,
   LayoutGridIcon,
   LayoutListIcon,
   MousePointerIcon,
@@ -11,12 +11,14 @@ import {
   TargetIcon
 } from 'lucide-react'
 import { forwardRef, HTMLAttributes } from 'react'
+import { kebabCase } from 'change-case'
 import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Hypertext } from '@/components/atoms/hypertext'
 import { Icon } from '@/components/atoms/icon'
 import { Media } from '@/components/atoms/media'
 import { Filter } from '@/components/molecules/filter'
+import { Section } from '@/components/molecules/section'
 import {
   Table,
   TableBody,
@@ -25,7 +27,6 @@ import {
   TableHeader,
   TableRow
 } from '@/components/molecules/table'
-import { Section } from '@/components/organisms/section'
 import { clientEntries } from '@/constants/client'
 import { appTimeZone } from '@/constants/date'
 import { projectEntries, projectIds } from '@/constants/project'
@@ -35,7 +36,6 @@ import { SelectEntry } from '@/types/layout'
 import { ProjectRole } from '@/types/project'
 import { formatStdDateRange } from '@/utils/date'
 import { cn, cva, VariantProps } from '@/utils/theme'
-import { kebabCase } from 'change-case'
 
 const styles = {
   root: cva('flex flex-col justify-center gap-16'),
@@ -53,15 +53,15 @@ const styles = {
   project: cva('flex flex-col gap-4'),
   projectMedia: cva('mb-4'),
   projectDetail: cva('flex justify-between gap-4'),
-  projectDivider: cva('border-t'),
+  projectDivider: cva('border-foreground/15 border-t'),
 
   tableTitleHead: cva('w-[40%]'),
   tableHead: cva('w-[20%]'),
   tableRoles: cva('capitalize')
 }
 
-type SectionArchiveRef = HTMLDivElement
-type SectionArchiveProps = HTMLAttributes<SectionArchiveRef> & VariantProps<typeof styles.root>
+type SectionProjectsRef = HTMLDivElement
+type SectionProjectsProps = HTMLAttributes<SectionProjectsRef> & VariantProps<typeof styles.root>
 
 const filterEntries: SelectEntry[] = [
   { icon: TargetIcon, name: 'All', value: 'all' },
@@ -70,11 +70,11 @@ const filterEntries: SelectEntry[] = [
 ]
 
 const layoutEntries: SelectEntry[] = [
-  { icon: LayoutListIcon, name: 'List', value: 'list' },
-  { icon: LayoutGridIcon, name: 'Grid', value: 'grid' }
+  { icon: LayoutGridIcon, name: 'Grid', value: 'grid' },
+  { icon: LayoutListIcon, name: 'List', value: 'list' }
 ]
 
-const SectionArchive = forwardRef<SectionArchiveRef, SectionArchiveProps>((props, ref) => {
+const SectionProjects = forwardRef<SectionProjectsRef, SectionProjectsProps>((props, ref) => {
   const { className, ...rest } = props
 
   const {
@@ -89,11 +89,11 @@ const SectionArchive = forwardRef<SectionArchiveRef, SectionArchiveProps>((props
   })
 
   const orderedProjects = projectIds.map((key) => projectEntries[key])
-  const archivedProjects = orderedProjects.filter((project) => !project.isFeatured)
-  const filteredProjects = archivedProjects.filter((project) =>
+  const featuredProjects = orderedProjects.filter((project) => project.isFeatured)
+  const filteredProjects = featuredProjects.filter((project) =>
     !isDefaultFilter ? project.roles.includes(activeFilterValue as ProjectRole) : true
   )
-  const featuredLength = orderedProjects.length - archivedProjects.length
+  const archivedLength = orderedProjects.length - featuredProjects.length
 
   return (
     <Section
@@ -105,18 +105,18 @@ const SectionArchive = forwardRef<SectionArchiveRef, SectionArchiveProps>((props
     >
       <div className={cn(styles.content())}>
         <div className={cn(styles.icon())}>
-          <Icon icon={ArchiveIcon} size="3xl" />
+          <Icon icon={DraftingCompassIcon} size="3xl" />
         </div>
         <div className={cn(styles.text())}>
           <h1 className={cn(textStyles.h1())}>
-            <Hypertext text="Archive." />
+            <Hypertext text="Works." />
           </h1>
-          <h2 className={cn(textStyles.h2())}>A Legacy of Innovation.</h2>
+          <h2 className={cn(textStyles.h2())}>Innovative Solutions, Real-World Impact.</h2>
           <p>
-            These archived projects represent key milestones in my career, showcasing innovative
-            solutions and collaborative efforts that have shaped my journey. Though they’ve since
-            been completed or passed on, they highlight my ability to tackle challenges and deliver
-            meaningful results.
+            From modernizing oil rig systems to building Aeroplan’s first browser extension, my
+            portfolio showcases innovative solutions that solve complex challenges. Each project
+            reflects my commitment to high-performing, secure, and accessible software solutions,
+            and my ability to lead teams toward measurable outcomes.
           </p>
         </div>
       </div>
@@ -184,15 +184,15 @@ const SectionArchive = forwardRef<SectionArchiveRef, SectionArchiveProps>((props
       )}
       <div className={cn(styles.cta())}>
         <Button size="lg" asChild>
-          <Link href="/works">
-            {featuredLength} Featured Works <Icon icon={MoveRightIcon} />
+          <Link href="/archive">
+            {archivedLength} Archived Works <Icon icon={MoveRightIcon} />
           </Link>
         </Button>
       </div>
     </Section>
   )
 })
-SectionArchive.displayName = 'SectionArchive'
+SectionProjects.displayName = 'SectionProjects'
 
-export { SectionArchive }
-export type { SectionArchiveProps, SectionArchiveRef }
+export { SectionProjects }
+export type { SectionProjectsProps, SectionProjectsRef }

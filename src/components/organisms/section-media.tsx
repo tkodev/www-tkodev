@@ -1,8 +1,8 @@
 import { forwardRef, HTMLAttributes } from 'react'
 import { Bg } from '@/components/atoms/bg'
 import { Media } from '@/components/atoms/media'
-import { Lightbox } from '@/components/organisms/lightbox'
-import { Section } from '@/components/organisms/section'
+import { Section } from '@/components/molecules/section'
+import { DialogMedia } from '@/components/organisms/dialog-media'
 import { MediaEntry } from '@/types/media'
 import { cn, cva, VariantProps } from '@/utils/theme'
 
@@ -47,11 +47,11 @@ const SectionMedia = forwardRef<SectionMediaRef, SectionMediaProps>((props, ref)
       {...rest}
     >
       {mediaEntries.map((mediaEntry, index) => (
-        <Lightbox key={`media-${index}`} mediaEntry={mediaEntry}>
+        <DialogMedia key={`media-${index}`} mediaEntry={mediaEntry}>
           <button>
             <Media aspect="video" mediaEntry={mediaEntry} isHover />
           </button>
-        </Lightbox>
+        </DialogMedia>
       ))}
     </Section>
   )

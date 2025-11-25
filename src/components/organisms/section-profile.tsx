@@ -1,13 +1,13 @@
 import { forwardRef, HTMLAttributes } from 'react'
+import { differenceInCalendarYears } from 'date-fns'
+import { fromZonedTime } from 'date-fns-tz'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/atoms/avatar'
 import { Bg } from '@/components/atoms/bg'
 import { Hypertext } from '@/components/atoms/hypertext'
-import { Section } from '@/components/organisms/section'
+import { Section } from '@/components/molecules/section'
 import { appTimeZone } from '@/constants/date'
 import { textStyles } from '@/constants/theme'
 import { cn, cva, VariantProps } from '@/utils/theme'
-import { differenceInCalendarYears } from 'date-fns'
-import { fromZonedTime } from 'date-fns-tz'
 
 const styles = {
   root: cva('flex flex-col justify-center gap-16'),

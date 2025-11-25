@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation'
 import { FC } from 'react'
-import { Main } from '@/components/organisms/main'
-import { SectionContact } from '@/components/sections/section-contact'
-import { SectionFrames } from '@/components/sections/section-frames'
-import { SectionMedia } from '@/components/sections/section-media'
-import { SectionProject } from '@/components/sections/section-project'
+import { camelCase, kebabCase } from 'change-case'
+import { SectionContact } from '@/components/organisms/section-contact'
+import { SectionFrames } from '@/components/organisms/section-frames'
+import { SectionMedia } from '@/components/organisms/section-media'
+import { SectionProject } from '@/components/organisms/section-project'
+import { Main } from '@/components/sections/main'
 import { projectEntries, projectIds } from '@/constants/project'
 import { ProjectId } from '@/types/project'
-import { camelCase, kebabCase } from 'change-case'
 
 type PageProps = {
   params: Promise<{ projectIdPath: string }>

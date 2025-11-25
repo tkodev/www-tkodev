@@ -1,8 +1,10 @@
 import { forwardRef, HTMLAttributes } from 'react'
+import { kebabCase } from 'change-case'
 import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Markdown } from '@/components/atoms/markdown'
 import { Media } from '@/components/atoms/media'
+import { Section } from '@/components/molecules/section'
 import {
   Table,
   TableBody,
@@ -11,8 +13,7 @@ import {
   TableHeader,
   TableRow
 } from '@/components/molecules/table'
-import { Lightbox } from '@/components/organisms/lightbox'
-import { Section } from '@/components/organisms/section'
+import { DialogMedia } from '@/components/organisms/dialog-media'
 import { clientEntries } from '@/constants/client'
 import { appTimeZone } from '@/constants/date'
 import { profileEntries } from '@/constants/profile'
@@ -20,7 +21,6 @@ import { textStyles } from '@/constants/theme'
 import { ProjectEntry } from '@/types/project'
 import { formatStdDateRange } from '@/utils/date'
 import { cn, cva, VariantProps } from '@/utils/theme'
-import { kebabCase } from 'change-case'
 
 const styles = {
   root: cva('flex flex-col justify-center gap-16'),
@@ -93,11 +93,11 @@ const SectionProject = forwardRef<SectionProjectRef, SectionProjectProps>((props
         </TableBody>
       </Table>
       {media[0] && (
-        <Lightbox mediaEntry={media[0]}>
+        <DialogMedia mediaEntry={media[0]}>
           <button>
             <Media mediaEntry={media[0]} isHover />
           </button>
-        </Lightbox>
+        </DialogMedia>
       )}
       {!!desc && (
         <div className={cn(styles.desc())}>

@@ -6,15 +6,15 @@ const styles = {
   table: cva('w-full caption-bottom text-sm'),
   tableHeader: cva('[&_tr]:border-b'),
   tableBody: cva('[&_tr:last-child]:border-0'),
-  tableFooter: cva('border-t bg-muted/50 [&>tr]:last:border-b-0'),
-  tableRow: cva('border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'),
+  tableFooter: cva('bg-muted/50 border-t [&>tr]:last:border-b-0'),
+  tableRow: cva('hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors'),
   tableHead: cva(
-    'min-h-24 whitespace-nowrap px-4 py-8 text-left align-middle font-light text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]'
+    'text-muted-foreground min-h-24 px-4 py-8 text-left align-middle font-light whitespace-nowrap [&:has([role=checkbox])]:pr-0 *:[[role=checkbox]]:translate-y-[2px]'
   ),
   tableCell: cva(
-    'min-h-32 whitespace-nowrap px-4 py-8 text-left align-top [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]'
+    'min-h-32 px-4 py-8 text-left align-top whitespace-nowrap [&:has([role=checkbox])]:pr-0 *:[[role=checkbox]]:translate-y-[2px]'
   ),
-  tableCaption: cva('mt-4 text-sm text-muted-foreground')
+  tableCaption: cva('text-muted-foreground mt-4 text-sm')
 }
 
 const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(

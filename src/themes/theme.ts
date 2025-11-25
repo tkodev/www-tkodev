@@ -1,11 +1,9 @@
 // noinspection ES6PreferShortImport - tailwind does not support ts aliases
 
-import fluid, { extract } from 'fluid-tailwind'
 import twGradientMaskImage from 'tailwind-gradient-mask-image'
 import { Config } from 'tailwindcss'
 import twAnimate from 'tailwindcss-animate'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import { fontFamily } from 'tailwindcss/defaultTheme'
 import { Theme } from '../types/theme'
 import { pxToRem } from '../utils/theme'
 
@@ -78,7 +76,7 @@ const typography: Theme = {
     h1: [pxToRem(72), { lineHeight: pxToRem(72 + 8) }]
   },
   fontFamily: {
-    sans: ['var(--font-sans)', ...fontFamily.sans],
+    sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
     'alliance-no2': [`var(--font-alliance-no2)`],
     'geist-sans': [`var(--font-geist-sans)`],
     'geist-mono': [`var(--font-geist-mono)`]
@@ -172,15 +170,14 @@ const theme: Theme = {
 // Tailwind CSS Configuration
 const themeConfig: Config = {
   content: {
-    files: [],
-    extract
+    files: []
   },
   theme: {
     ...screens,
     fontSize: typography.fontSize,
     extend: theme
   },
-  plugins: [fluid, twAnimate, twGradientMaskImage]
+  plugins: [twAnimate, twGradientMaskImage]
 }
 
 export { theme, themeConfig }

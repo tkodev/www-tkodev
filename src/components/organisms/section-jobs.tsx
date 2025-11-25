@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import { LinkedinIcon } from 'lucide-react'
 import { forwardRef, HTMLAttributes } from 'react'
+import { differenceInCalendarYears } from 'date-fns'
+import { fromZonedTime } from 'date-fns-tz'
 import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Client } from '@/components/atoms/client'
 import { Icon } from '@/components/atoms/icon'
-import { Section } from '@/components/organisms/section'
+import { Section } from '@/components/molecules/section'
 import { clientEntries } from '@/constants/client'
 import { appTimeZone } from '@/constants/date'
 import { jobEntries } from '@/constants/job'
 import { textStyles } from '@/constants/theme'
 import { formatStdDateRange } from '@/utils/date'
 import { cn, cva, VariantProps } from '@/utils/theme'
-import { differenceInCalendarYears } from 'date-fns'
-import { fromZonedTime } from 'date-fns-tz'
 
 const styles = {
   root: cva('flex flex-col gap-16'),
@@ -22,7 +22,7 @@ const styles = {
   cta: cva('flex justify-center'),
 
   text: cva('flex flex-col gap-4'),
-  jobs: cva('flex w-full flex-col divide-y divide-border'),
+  jobs: cva('divide-border flex w-full flex-col divide-y'),
 
   job: cva('grid grid-cols-[1fr_auto] items-center justify-center gap-4 py-8'),
   client: cva('hidden md:block')

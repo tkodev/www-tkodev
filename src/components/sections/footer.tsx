@@ -26,16 +26,16 @@ const styles = {
   root: cva(['z-10 h-auto w-full', 'fixed bottom-0 left-0']),
   fade: cva([
     'pointer-events-none h-[96px] w-full',
-    'fixed -bottom-[2px] left-0 bg-background backdrop-blur-xl backdrop-filter gradient-mask-t-10'
+    'bg-background gradient-mask-t-10 fixed -bottom-[2px] left-0 backdrop-blur-xl backdrop-filter'
   ]),
   container: cva([
     'fixed bottom-4 left-1/2 mx-auto -translate-x-1/2 px-4',
     'z-10 h-auto w-full max-w-[1280px]'
   ]),
-  bar: cva('flex h-16 animate-slide-up items-center justify-between px-2', {
+  bar: cva('animate-slide-up flex h-16 items-center justify-between px-2', {
     variants: {
       variant: {
-        bar: ['rounded-full border bg-background/30 shadow-md', 'backdrop-blur-lg backdrop-filter'],
+        bar: ['bg-background/30 rounded-full border shadow-md', 'backdrop-blur-lg backdrop-filter'],
         flat: 'rounded-none border-none bg-transparent shadow-none'
       }
     },

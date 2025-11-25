@@ -1,5 +1,5 @@
-import { simpleDateFormat } from '@/constants/date'
 import { format } from 'date-fns-tz'
+import { simpleDateFormat } from '@/constants/date'
 
 const formatStdDateRange = (startDate: Date, endDate: Date | undefined, timeZone: string) => {
   const startDateStr = format(startDate, simpleDateFormat, { timeZone })

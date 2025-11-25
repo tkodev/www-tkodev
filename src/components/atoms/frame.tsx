@@ -16,7 +16,7 @@ const styles = {
     }
   }),
   screen: cva('h-full w-full'),
-  device: cva('pointer-events-none relative left-1/2 top-0 -translate-x-1/2')
+  device: cva('pointer-events-none relative top-0 left-1/2 -translate-x-1/2')
 }
 
 type FrameRef = HTMLDivElement

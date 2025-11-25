@@ -2,7 +2,7 @@ import { FC, HTMLAttributes } from 'react'
 import { cn, cva, type VariantProps } from '@/utils/theme'
 
 const styles = {
-  root: cva('h-full min-h-full w-full bg-background shadow-inner')
+  root: cva('bg-background h-full min-h-full w-full shadow-inner')
 }
 
 type MainProps = HTMLAttributes<HTMLDivElement> & VariantProps<typeof styles.root>

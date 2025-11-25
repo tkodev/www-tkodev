@@ -1,7 +1,6 @@
 // noinspection ES6PreferShortImport - tailwind does not support ts aliases
 
 import type { Config } from 'tailwindcss'
-import { extract } from 'fluid-tailwind'
 import { themeConfig } from './src/themes/theme'
 
 const tailwindConfig: Config = {
@@ -12,8 +11,7 @@ const tailwindConfig: Config = {
       './src/components/**/*.{js,ts,jsx,tsx,mdx}',
       './src/app/**/*.{js,ts,jsx,tsx,mdx}',
       './src/constants/**/*.{js,ts,jsx,tsx,mdx}'
-    ],
-    extract
+    ]
   },
   presets: [themeConfig]
 }

@@ -7,7 +7,7 @@ const styles = {
     variants: {
       variant: {
         fill: 'fill-foreground stroke-transparent stroke-2',
-        outline: 'fill-transparent stroke-foreground/15 stroke-2'
+        outline: 'stroke-foreground/15 fill-transparent stroke-2'
       }
     },
     defaultVariants: {

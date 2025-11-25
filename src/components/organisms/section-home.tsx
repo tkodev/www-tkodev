@@ -7,7 +7,7 @@ import { Brand } from '@/components/atoms/brand'
 import { Button } from '@/components/atoms/button'
 import { Cross } from '@/components/atoms/cross'
 import { Icon } from '@/components/atoms/icon'
-import { Section } from '@/components/organisms/section'
+import { Section } from '@/components/molecules/section'
 import { textStyles } from '@/constants/theme'
 import { cn, cva, VariantProps } from '@/utils/theme'
 
@@ -23,16 +23,16 @@ const styles = {
     'aspect-square h-auto w-full',
     'relative',
     'flex flex-col items-center justify-center',
-    'lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-left'
+    'lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:text-left'
   ]),
   intro: cva([
     'h-auto w-[320px] max-w-[96%] text-center lg:w-[200px]',
     '-mt-8 sm:-mt-16 md:-mt-24 lg:mt-0',
-    'lg:absolute lg:left-[78%] lg:top-1/2 lg:-translate-y-1/2 lg:text-left xl:left-[82%]',
+    'lg:absolute lg:top-1/2 lg:left-[78%] lg:-translate-y-1/2 lg:text-left xl:left-[82%]',
     'flex flex-col gap-2'
   ]),
 
-  cross: cva(['h-auto w-full', 'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2']),
+  cross: cva(['h-auto w-full', 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2']),
   brand1: cva([
     'relative -left-8 h-auto w-[75%]',
     'animate-slide-down transition-all duration-1000 hover:scale-105'
@@ -47,8 +47,8 @@ const styles = {
   ]),
   avatar: cva([
     'h-auto w-[50%]',
-    'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
-    'grayscale-[25%] transition-all duration-1000 hover:scale-105 hover:grayscale'
+    'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+    'grayscale-25 transition-all duration-1000 hover:scale-105 hover:grayscale'
   ]),
 
   cta: cva('mt-2')
