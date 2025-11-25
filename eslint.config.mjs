@@ -1,17 +1,17 @@
-// eslint.config.mjs
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
 import nextPlugin from '@next/eslint-plugin-next'
-import { FlatCompat } from '@eslint/eslintrc'
-import prettierConfig from 'eslint-config-prettier'
+import prettierConfig from 'eslint-config-prettier/flat'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import prettierPlugin from 'eslint-plugin-prettier'
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname
-})
-
 /** @type {import("eslint").Linter.Config} */
-const config = [
-  // Base configuration
+const eslintConfig = defineConfig([// Base configuration
+  ...nextVitals,
+  ...nextTs,
+  ...[prettierConfig],
   {
     files: ['**/*.{js,jsx,ts,tsx,mjs}'],
     languageOptions: {
@@ -156,10 +156,13 @@ const config = [
       ]
     }
   },
+  globalIgnores([
+    "node_modules/**", 
+    ".next/**", 
+    "out/**", 
+    "build/**", 
+    "next-env.d.ts"
+  ])
+])
 
-  // Extend configurations
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
-  prettierConfig
-]
-
-export default config
+export default eslintConfig
