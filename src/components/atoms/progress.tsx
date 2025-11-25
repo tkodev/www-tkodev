@@ -6,9 +6,9 @@ import { cn, cva } from '@/utils/theme'
 
 const styles = {
   progress: cva(
-    'relative h-2 w-full overflow-hidden rounded-full border border-secondary bg-secondary'
+    'border-secondary bg-secondary relative h-2 w-full overflow-hidden rounded-full border'
   ),
-  indicator: cva('h-full w-full flex-1 rounded-full bg-primary transition-all')
+  indicator: cva('bg-primary h-full w-full flex-1 rounded-full transition-all')
 }
 
 const Progress = forwardRef<

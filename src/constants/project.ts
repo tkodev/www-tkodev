@@ -1,6 +1,6 @@
+import { fromZonedTime } from 'date-fns-tz'
 import { appTimeZone } from '@/constants/date'
 import { ProjectEntry, ProjectId } from '@/types/project'
-import { fromZonedTime } from 'date-fns-tz'
 
 const projectEntries: Record<ProjectId, ProjectEntry> = {
   beyondModernization: {

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { FC } from 'react'
+import { camelCase, kebabCase } from 'change-case'
 import { Main } from '@/components/organisms/main'
 import { SectionContact } from '@/components/sections/section-contact'
 import { SectionFrames } from '@/components/sections/section-frames'
@@ -7,7 +8,6 @@ import { SectionMedia } from '@/components/sections/section-media'
 import { SectionProject } from '@/components/sections/section-project'
 import { projectEntries, projectIds } from '@/constants/project'
 import { ProjectId } from '@/types/project'
-import { camelCase, kebabCase } from 'change-case'
 
 type PageProps = {
   params: Promise<{ projectIdPath: string }>

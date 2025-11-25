@@ -1,18 +1,21 @@
-import { defineConfig, globalIgnores } from 'eslint/config'
-
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
 import nextPlugin from '@next/eslint-plugin-next'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
 import prettierConfig from 'eslint-config-prettier/flat'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import prettierPlugin from 'eslint-plugin-prettier'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 /** @type {import("eslint").Linter.Config} */
-const eslintConfig = defineConfig([// Base configuration
+const eslintConfig = defineConfig([
+  // base configuration
   ...nextVitals,
   ...nextTs,
   ...[prettierConfig],
+
+  // override configuration
   {
+    // configure nextts
     files: ['**/*.{js,jsx,ts,tsx,mjs}'],
     languageOptions: {
       parserOptions: {
@@ -20,11 +23,13 @@ const eslintConfig = defineConfig([// Base configuration
         sourceType: 'module'
       }
     },
+    // init plugins
     plugins: {
       '@next/eslint-plugin-next': nextPlugin,
       prettier: prettierPlugin,
       perfectionist: perfectionistPlugin
     },
+    // new rules
     rules: {
       // Vercel style guide
       'import/no-default-export': 'off',
@@ -156,13 +161,9 @@ const eslintConfig = defineConfig([// Base configuration
       ]
     }
   },
-  globalIgnores([
-    "node_modules/**", 
-    ".next/**", 
-    "out/**", 
-    "build/**", 
-    "next-env.d.ts"
-  ])
+
+  // global ignores
+  globalIgnores(['node_modules/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts'])
 ])
 
 export default eslintConfig

@@ -17,7 +17,7 @@ const styles = {
   root: cva(''),
   content: cva([
     'h-full w-full lg:max-h-[90%] lg:max-w-[90%]',
-    'border bg-background shadow-lg',
+    'bg-background border shadow-lg',
     'grid grid-rows-[auto_1fr_auto]'
   ]),
 
@@ -36,7 +36,7 @@ const styles = {
   }),
 
   left: cva('flex min-h-0 min-w-0 items-center justify-center p-8'),
-  right: cva('border-t p-8 md:border-l md:border-t-0')
+  right: cva('border-t p-8 md:border-t-0 md:border-l')
 }
 
 type LightboxRef = HTMLButtonElement

@@ -11,6 +11,7 @@ import {
   TargetIcon
 } from 'lucide-react'
 import { forwardRef, HTMLAttributes } from 'react'
+import { kebabCase } from 'change-case'
 import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Hypertext } from '@/components/atoms/hypertext'
@@ -35,7 +36,6 @@ import { SelectEntry } from '@/types/layout'
 import { ProjectRole } from '@/types/project'
 import { formatStdDateRange } from '@/utils/date'
 import { cn, cva, VariantProps } from '@/utils/theme'
-import { kebabCase } from 'change-case'
 
 const styles = {
   root: cva('flex flex-col justify-center gap-16'),
@@ -53,7 +53,7 @@ const styles = {
   project: cva('flex flex-col gap-4'),
   projectMedia: cva('mb-4'),
   projectDetail: cva('flex justify-between gap-4'),
-  projectDivider: cva('border-t border-foreground/15'),
+  projectDivider: cva('border-foreground/15 border-t'),
 
   tableTitleHead: cva('w-[40%]'),
   tableHead: cva('w-[20%]'),

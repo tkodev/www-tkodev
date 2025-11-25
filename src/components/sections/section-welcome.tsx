@@ -15,12 +15,12 @@ const styles = {
 
   content: cva([
     'aspect-square w-full max-w-[896px]',
-    'absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
+    'absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2',
     'sm:top-1/2',
     'flex flex-col items-center justify-center'
   ]),
 
-  cross: cva(['h-full w-full', 'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2']),
+  cross: cva(['h-full w-full', 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2']),
 
   brand: cva([
     'relative h-auto w-[75%]',
@@ -29,12 +29,12 @@ const styles = {
 
   backdrop: cva([
     'h-[32%] w-[32%]',
-    'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
-    'rounded-full bg-foreground mix-blend-exclusion transition-all duration-1000 hover:scale-105'
+    'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+    'bg-foreground rounded-full mix-blend-exclusion transition-all duration-1000 hover:scale-105'
   ]),
   intro: cva([
-    'h-auto w-[320px] text-background lg:w-[200px]',
-    'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center',
+    'text-background h-auto w-[320px] lg:w-[200px]',
+    'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center',
     'flex flex-col gap-2'
   ]),
 

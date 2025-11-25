@@ -40,7 +40,7 @@ const styles = {
         top: 'bg-top'
       },
       overlay: {
-        true: 'pointer-events-none fixed left-0 top-0 z-50'
+        true: 'pointer-events-none fixed top-0 left-0 z-50'
       }
     },
     defaultVariants: {

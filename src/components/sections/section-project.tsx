@@ -1,4 +1,5 @@
 import { forwardRef, HTMLAttributes } from 'react'
+import { kebabCase } from 'change-case'
 import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Markdown } from '@/components/atoms/markdown'
@@ -20,7 +21,6 @@ import { textStyles } from '@/constants/theme'
 import { ProjectEntry } from '@/types/project'
 import { formatStdDateRange } from '@/utils/date'
 import { cn, cva, VariantProps } from '@/utils/theme'
-import { kebabCase } from 'change-case'
 
 const styles = {
   root: cva('flex flex-col justify-center gap-16'),
