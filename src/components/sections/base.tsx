@@ -18,10 +18,10 @@ const styles = {
   })
 }
 
-type UnderlayRef = HTMLDivElement
-type UnderlayProps = HTMLAttributes<UnderlayRef> & VariantProps<typeof styles.root>
+type BaseRef = HTMLDivElement
+type BaseProps = HTMLAttributes<BaseRef> & VariantProps<typeof styles.root>
 
-const Underlay = forwardRef<UnderlayRef, UnderlayProps>((props, ref) => {
+const Base = forwardRef<BaseRef, BaseProps>((props, ref) => {
   const { className, ...rest } = props
 
   return (
@@ -30,7 +30,7 @@ const Underlay = forwardRef<UnderlayRef, UnderlayProps>((props, ref) => {
     </div>
   )
 })
-Underlay.displayName = 'Underlay'
+Base.displayName = 'Base'
 
-export { Underlay }
-export type { UnderlayProps, UnderlayRef }
+export { Base }
+export type { BaseProps, BaseRef }

@@ -4,7 +4,7 @@ import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Markdown } from '@/components/atoms/markdown'
 import { Media } from '@/components/atoms/media'
-import { Lightbox } from '@/components/molecules/lightbox'
+import { DialogMedia } from '@/components/organisms/dialog-media'
 import { Section } from '@/components/molecules/section'
 import {
   Table,
@@ -93,11 +93,11 @@ const SectionProject = forwardRef<SectionProjectRef, SectionProjectProps>((props
         </TableBody>
       </Table>
       {media[0] && (
-        <Lightbox mediaEntry={media[0]}>
+        <DialogMedia mediaEntry={media[0]}>
           <button>
             <Media mediaEntry={media[0]} isHover />
           </button>
-        </Lightbox>
+        </DialogMedia>
       )}
       {!!desc && (
         <div className={cn(styles.desc())}>

@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'motion/react'
 import { forwardRef, HTMLAttributes, useRef } from 'react'
 import { Bg } from '@/components/atoms/bg'
 import { Frame } from '@/components/atoms/frame'
-import { Lightbox } from '@/components/molecules/lightbox'
+import { DialogMedia } from '@/components/organisms/dialog-media'
 import { Section } from '@/components/molecules/section'
 import { MediaEntry } from '@/types/media'
 import { cn, cva, VariantProps } from '@/utils/theme'
@@ -64,11 +64,11 @@ const SectionFrames = forwardRef<SectionFramesRef, SectionFramesProps>((props, r
               ? { y: isFirst ? translateFirst : isLast ? translateThird : 0 }
               : {}
           return (
-            <Lightbox key={`frame-${index}`} mediaEntry={frameEntry}>
+            <DialogMedia key={`frame-${index}`} mediaEntry={frameEntry}>
               <motion.button className={cn(styles.item({ frameId }))} style={style}>
                 <Frame mediaEntry={frameEntry} />
               </motion.button>
-            </Lightbox>
+            </DialogMedia>
           )
         })}
       </div>

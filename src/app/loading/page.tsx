@@ -1,5 +1,5 @@
-import { Main } from '@/components/organisms/main'
-import { SectionLoading } from '@/components/sections/section-loading'
+import { Main } from '@/components/sections/main'
+import { SectionLoading } from '@/components/organisms/section-loading'
 
 const Page = () => {
   return (
