@@ -1,8 +1,8 @@
 import { forwardRef, HTMLAttributes } from 'react'
 import { Bg } from '@/components/atoms/bg'
 import { Media } from '@/components/atoms/media'
-import { DialogMedia } from '@/components/organisms/dialog-media'
 import { Section } from '@/components/molecules/section'
+import { DialogMedia } from '@/components/organisms/dialog-media'
 import { MediaEntry } from '@/types/media'
 import { cn, cva, VariantProps } from '@/utils/theme'
 

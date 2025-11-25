@@ -170,7 +170,7 @@ const theme: Theme = {
 // Tailwind CSS Configuration
 const themeConfig: Config = {
   content: {
-    files: [],
+    files: []
   },
   theme: {
     ...screens,

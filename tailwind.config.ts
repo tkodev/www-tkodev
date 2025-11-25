@@ -11,7 +11,7 @@ const tailwindConfig: Config = {
       './src/components/**/*.{js,ts,jsx,tsx,mdx}',
       './src/app/**/*.{js,ts,jsx,tsx,mdx}',
       './src/constants/**/*.{js,ts,jsx,tsx,mdx}'
-    ],
+    ]
   },
   presets: [themeConfig]
 }

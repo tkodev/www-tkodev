@@ -4,7 +4,6 @@ import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Markdown } from '@/components/atoms/markdown'
 import { Media } from '@/components/atoms/media'
-import { DialogMedia } from '@/components/organisms/dialog-media'
 import { Section } from '@/components/molecules/section'
 import {
   Table,
@@ -14,6 +13,7 @@ import {
   TableHeader,
   TableRow
 } from '@/components/molecules/table'
+import { DialogMedia } from '@/components/organisms/dialog-media'
 import { clientEntries } from '@/constants/client'
 import { appTimeZone } from '@/constants/date'
 import { profileEntries } from '@/constants/profile'
