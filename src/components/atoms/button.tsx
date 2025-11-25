@@ -7,7 +7,7 @@ const styles = {
   root: cva(
     [
       'inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors',
-      'focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-none',
+      'focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-hidden',
       'disabled:pointer-events-none disabled:scale-100 disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0'
     ],
     {

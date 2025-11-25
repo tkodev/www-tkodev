@@ -1,9 +1,13 @@
+
+@reference './theme.css';
+
 * {
   @apply border-border;
 }
 strong {
   @apply font-semibold;
 }
+
 body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
