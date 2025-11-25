@@ -1,6 +1,6 @@
 import { forwardRef, HTMLAttributes } from 'react'
 import { Bg } from '@/components/atoms/bg'
-import { Section } from '@/components/organisms/section'
+import { Section } from '@/components/molecules/section'
 import { textStyles } from '@/constants/theme'
 import { cn, cva, VariantProps } from '@/utils/theme'
 

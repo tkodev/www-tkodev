@@ -3,6 +3,8 @@ import { Bg } from '@/components/atoms/bg'
 import { Button } from '@/components/atoms/button'
 import { Markdown } from '@/components/atoms/markdown'
 import { Media } from '@/components/atoms/media'
+import { Lightbox } from '@/components/molecules/lightbox'
+import { Section } from '@/components/molecules/section'
 import {
   Table,
   TableBody,
@@ -11,8 +13,6 @@ import {
   TableHeader,
   TableRow
 } from '@/components/molecules/table'
-import { Lightbox } from '@/components/organisms/lightbox'
-import { Section } from '@/components/organisms/section'
 import { clientEntries } from '@/constants/client'
 import { appTimeZone } from '@/constants/date'
 import { profileEntries } from '@/constants/profile'

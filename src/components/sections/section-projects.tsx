@@ -17,6 +17,7 @@ import { Hypertext } from '@/components/atoms/hypertext'
 import { Icon } from '@/components/atoms/icon'
 import { Media } from '@/components/atoms/media'
 import { Filter } from '@/components/molecules/filter'
+import { Section } from '@/components/molecules/section'
 import {
   Table,
   TableBody,
@@ -25,7 +26,6 @@ import {
   TableHeader,
   TableRow
 } from '@/components/molecules/table'
-import { Section } from '@/components/organisms/section'
 import { clientEntries } from '@/constants/client'
 import { appTimeZone } from '@/constants/date'
 import { projectEntries, projectIds } from '@/constants/project'

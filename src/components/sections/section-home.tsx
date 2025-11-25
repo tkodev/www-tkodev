@@ -7,7 +7,7 @@ import { Brand } from '@/components/atoms/brand'
 import { Button } from '@/components/atoms/button'
 import { Cross } from '@/components/atoms/cross'
 import { Icon } from '@/components/atoms/icon'
-import { Section } from '@/components/organisms/section'
+import { Section } from '@/components/molecules/section'
 import { textStyles } from '@/constants/theme'
 import { cn, cva, VariantProps } from '@/utils/theme'
 
