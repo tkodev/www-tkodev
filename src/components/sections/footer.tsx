@@ -70,7 +70,7 @@ const navItems: NavEntry[] = [
     size: 'icon'
   },
   {
-    href: '/files/tony-ko-resume-q4-2024.pdf',
+    href: '/files/tony-ko-resume-2026.pdf',
     icon: FileUserIcon,
     variant: 'ghost',
     size: 'icon'
