@@ -36,7 +36,8 @@ const SectionFrames = forwardRef<SectionFramesRef, SectionFramesProps>((props, r
 
   const contentRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
-    target: contentRef,
+    // eslint-disable-next-line react-hooks/refs
+    target: contentRef.current ? contentRef : undefined,
     offset: ['start end', 'end start']
   })
 
