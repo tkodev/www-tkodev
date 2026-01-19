@@ -3,6 +3,64 @@ import { appTimeZone } from '@/constants/date'
 import { ProjectEntry, ProjectId } from '@/types/project'
 
 const projectEntries: Record<ProjectId, ProjectEntry> = {
+  loblawsPerfectExperience: {
+    id: 'loblawsPerfectExperience',
+    roles: ['development'],
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/sdm-pe/desktop.png',
+        width: 3840,
+        height: 2160,
+        alt: 'Shoppers Drug Mart Perfect Experience - Desktop'
+      }
+    ],
+    frames: [
+      {
+        type: 'image',
+        src: '/images/projects/sdm-pe/desktop.png',
+        width: 3840,
+        height: 2160,
+        alt: 'Shoppers Drug Mart Perfect Experience - Desktop',
+        frameId: 'desktop'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/sdm-pe/mobile.png',
+        width: 1290,
+        height: 2796,
+        alt: 'Shoppers Drug Mart Perfect Experience - Mobile',
+        frameId: 'mobile'
+      }
+    ],
+    title: 'Loblaws Perfect Experience',
+    intro:
+      'Web telemetry SDK package that unified observability across multiple lines of business. This project established organization-wide insights into performance metrics, enabling actionable diagnostics and SLO monitoring through a flexible, reusable SDK built on OpenTelemetry.',
+    desc: 'As Web Lead for Loblaws Digital Telemetry, I architected and developed a cross-platform telemetry SDK package (Node.js / Next.js) using low-level OpenTelemetry APIs, which was adopted across multiple lines of business (LOBs) within Loblaws Digital. I proposed scalable web architecture, SDK structure, data flows, and Grafana dashboard POC to leadership and executive team across LOBs, platforms, and affiliated projects. I co-led technical design conversations with engineering leads to collect requirements and alignment on instrumentation strategy and telemetry adoption. I implemented core telemetry events and instrumentation patterns (traces, metrics, logs), ensuring compatibility with both server-side (Node) and client-side (browser) runtimes. I abstracted differences in LOB-specific needs, Next.js features/versions, and runtime environments to deliver a flexible and reusable SDK. I built a zustand-powered state store with historical state tracking to enrich trace context and frontend observability. I designed and developed custom data transformation logic to feed into the broader VictoriaMetrics, Tempo, and Grafana observability stack. This enabled organization-wide insights into performance metrics including page load durations, frontend error rates, and SLO breaches — with emphasis on actionable P95 latency breakdowns and user-centric diagnostics.',
+    clientId: 'badal',
+    profileIds: ['tony', 'jax', 'ron', 'yuval'],
+    startDate: fromZonedTime('2024-12-01', appTimeZone),
+    endDate: fromZonedTime('2025-06-30', appTimeZone),
+    skills: [
+      'Fetch API',
+      'Next.js',
+      'OpenTelemetry',
+      'TypeScript',
+      'Zustand',
+      'Grafana',
+      'VictoriaMetrics',
+      'Tempo',
+      'Observability',
+      'SDK Development',
+      'Software Architecture',
+      'Performance Monitoring',
+      'SLO Management',
+      'Cross-platform Development',
+      'State Management',
+      'Data Transformation'
+    ],
+    isFeatured: true
+  },
   beyondModernization: {
     id: 'beyondModernization',
     roles: ['development', 'design'],
@@ -1393,6 +1451,7 @@ const projectEntries: Record<ProjectId, ProjectEntry> = {
 }
 
 const projectIds: ProjectId[] = [
+  'loblawsPerfectExperience',
   'beyondModernization',
   'paypowerReloadablePrepaidMastercardMobileApp',
   'aeroplanEStore',

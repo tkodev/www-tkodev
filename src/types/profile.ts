@@ -1,5 +1,8 @@
 type ProfileId =
   | 'tony'
+  | 'jax'
+  | 'ron'
+  | 'yuval'
   | 'tulio'
   | 'zeena'
   | 'harpreet'

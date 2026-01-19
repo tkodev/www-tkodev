@@ -3,6 +3,7 @@ import { MediaEntry } from '@/types/media'
 import { ProfileId } from '@/types/profile'
 
 type ProjectId =
+  | 'loblawsPerfectExperience'
   | 'beyondModernization'
   | 'paypowerReloadablePrepaidMastercardMobileApp'
   | 'aeroplanShoppingButton'
