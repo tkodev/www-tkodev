@@ -9,10 +9,10 @@ const projectEntries: Record<ProjectId, ProjectEntry> = {
     media: [
       {
         type: 'image',
-        src: '/images/projects/sdm-pe/desktop.png',
-        width: 3840,
-        height: 2160,
-        alt: 'Shoppers Drug Mart Perfect Experience - Desktop'
+        src: '/images/projects/sdm-pe/grafana.png',
+        width: 1040,
+        height: 580,
+        alt: 'Example Grafana Dashboard - Serverside Render to Clientside Render - Load Time Traces & Metrics'
       }
     ],
     frames: [
