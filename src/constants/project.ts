@@ -129,7 +129,7 @@ const projectEntries: Record<ProjectId, ProjectEntry> = {
         frameId: 'desktop'
       }
     ],
-    title: 'Beyond MPD - Olympus Platform',
+    title: 'Beyond MPD Olympus Platform',
     intro:
       'The Olympus platform is redefining industrial operations by transforming legacy oil rig systems into a cutting-edge, event-driven architecture. Designed to improve operational integrity and real-time decision-making, this modernization project bridges advanced technology with critical field applications.',
     desc: 'As part of the Beyond MPD modernization project, I co-developed an event-driven architecture using event brokers to ensure reliable communication across control systems interfacing with oil rig panels, communication buses, and PLCs. I collaborated on building a design system in Figma, enabling a consistent and intuitive user interface across applications. I contributed to back-end solutions supporting the calibration of chokes and sensors, while co-authoring interpolation algorithms for precise fluid pressure control with rigorous unit testing. Leveraging SVG and Canvas, I designed real-time and historical data visualization solutions capable of tracking over 10,000 data points with subsecond tolerance. Additionally, I developed robust validation schemas, optimized CI/CD pipelines, and ensured global deployment compatibility through precise unit conversion standards. My role also involved creating project management presentations to enhance team efficiency and streamline processes. Beyond is poised to set new standards in the industry, with more details to come post-launch.',
