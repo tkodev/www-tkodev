@@ -4,9 +4,9 @@ import { cn, cva } from '@/utils/theme'
 const styles = {
   root: cva([
     'flex h-9 w-full px-3 py-1',
-    'rounded-full border border-input bg-background shadow-sm transition-colors',
-    'file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground',
-    'placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
+    'border-input bg-background rounded-full border shadow-sm transition-colors',
+    'file:text-foreground file:border-0 file:bg-transparent file:text-sm file:font-medium',
+    'placeholder:text-muted-foreground focus-visible:ring-ring focus-visible:ring-1 focus-visible:outline-hidden',
     'disabled:cursor-not-allowed disabled:opacity-50'
   ])
 }

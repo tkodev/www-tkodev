@@ -15,7 +15,7 @@ import '../themes/theme-utils.css'
 
 const styles = {
   html: cva('h-full w-full scroll-smooth'),
-  body: cva('h-full w-full bg-background font-geist-sans text-base font-light text-foreground')
+  body: cva('bg-background font-geist-sans text-foreground h-full w-full text-base font-light')
 }
 
 const pagedata = {

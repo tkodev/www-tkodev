@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Main } from '@/components/organisms/main'
-import { SectionExample } from '@/components/sections/section-example'
+import { SectionExample } from '@/components/organisms/section-example'
+import { Main } from '@/components/sections/main'
 import { PageProps } from '@/types/layout'
 
 const Page: FC<PageProps> = async () => {

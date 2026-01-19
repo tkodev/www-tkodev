@@ -1,8 +1,8 @@
-import { Main } from '@/components/organisms/main'
-import { SectionClients } from '@/components/sections/section-clients'
-import { SectionContact } from '@/components/sections/section-contact'
-import { SectionJobs } from '@/components/sections/section-jobs'
-import { SectionProfile } from '@/components/sections/section-profile'
+import { SectionClients } from '@/components/organisms/section-clients'
+import { SectionContact } from '@/components/organisms/section-contact'
+import { SectionJobs } from '@/components/organisms/section-jobs'
+import { SectionProfile } from '@/components/organisms/section-profile'
+import { Main } from '@/components/sections/main'
 
 const Page = () => {
   return (

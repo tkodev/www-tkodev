@@ -1,6 +1,6 @@
+import { fromZonedTime } from 'date-fns-tz'
 import { appTimeZone } from '@/constants/date'
 import { ProjectEntry, ProjectId } from '@/types/project'
-import { fromZonedTime } from 'date-fns-tz'
 
 const projectEntries: Record<ProjectId, ProjectEntry> = {
   beyondModernization: {
@@ -9,16 +9,71 @@ const projectEntries: Record<ProjectId, ProjectEntry> = {
     media: [
       {
         type: 'image',
-        src: '/images/projects/beyond.png',
+        src: '/images/projects/beyond-mpd/1.png',
+        width: 1060,
+        height: 590,
+        alt: 'Beyond MPD - Olympus Ramp Interface'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/beyond.png',
         width: 1920,
         height: 1080,
-        alt: 'Beyond Oil Rig Control Interface'
+        alt: 'Beyond MPD - Webpage'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/olympus.png',
+        width: 3660,
+        height: 1994,
+        alt: 'Beyond MPD - Logo'
       }
     ],
-    frames: [],
-    title: 'Beyond Oil Rig Control Interface',
+    frames: [
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/1.png',
+        width: 1060,
+        height: 590,
+        alt: 'Beyond MPD - Olympus Ramp Interface',
+        frameId: 'desktop'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/2.png',
+        width: 1170,
+        height: 657,
+        alt: 'Beyond MPD - Olympus Ramp Interface - Light Mode',
+        frameId: 'desktop'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/3.png',
+        width: 1319,
+        height: 729,
+        alt: 'Beyond MPD - Olympus Advanced Tripping Interface',
+        frameId: 'desktop'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/3-basic.png',
+        width: 1350,
+        height: 756,
+        alt: 'Beyond MPD - Olympus Basic Tripping Interface',
+        frameId: 'desktop'
+      },
+      {
+        type: 'image',
+        src: '/images/projects/beyond-mpd/4-rollover.png',
+        width: 906,
+        height: 509,
+        alt: 'Beyond MPD - Olympus Rollover Interface',
+        frameId: 'desktop'
+      }
+    ],
+    title: 'Beyond MPD - Olympus Platform',
     intro:
-      'The Beyond project is redefining industrial operations by transforming legacy oil rig systems into a cutting-edge, event-driven architecture. Designed to improve operational integrity and real-time decision-making, this modernization project bridges advanced technology with critical field applications.',
+      'The Olympus platform is redefining industrial operations by transforming legacy oil rig systems into a cutting-edge, event-driven architecture. Designed to improve operational integrity and real-time decision-making, this modernization project bridges advanced technology with critical field applications.',
     desc: 'As part of the Beyond MPD modernization project, I co-developed an event-driven architecture using event brokers to ensure reliable communication across control systems interfacing with oil rig panels, communication buses, and PLCs. I collaborated on building a design system in Figma, enabling a consistent and intuitive user interface across applications. I contributed to back-end solutions supporting the calibration of chokes and sensors, while co-authoring interpolation algorithms for precise fluid pressure control with rigorous unit testing. Leveraging SVG and Canvas, I designed real-time and historical data visualization solutions capable of tracking over 10,000 data points with subsecond tolerance. Additionally, I developed robust validation schemas, optimized CI/CD pipelines, and ensured global deployment compatibility through precise unit conversion standards. My role also involved creating project management presentations to enhance team efficiency and streamline processes. Beyond is poised to set new standards in the industry, with more details to come post-launch.',
     clientId: 'badal',
     profileIds: ['tony', 'tulio', 'zeena', 'harpreet'],

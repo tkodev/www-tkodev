@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { Main } from '@/components/organisms/main'
-import { SectionContact } from '@/components/sections/section-contact'
-import { SectionShots } from '@/components/sections/section-shots'
+import { SectionContact } from '@/components/organisms/section-contact'
+import { SectionShots } from '@/components/organisms/section-shots'
+import { Main } from '@/components/sections/main'
 import { PageProps } from '@/types/layout'
 
 const Page: FC<PageProps> = async () => {
