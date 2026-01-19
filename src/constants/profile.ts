@@ -10,6 +10,33 @@ const profileEntries: Record<ProfileId, ProfileEntry> = {
     email: 'tony@tko.dev',
     phone: '+1 (647) 300-9787'
   },
+  jax: {
+    id: 'jax',
+    name: 'Jackson Feist',
+    title: 'Technical Lead',
+    linkedin: 'https://www.linkedin.com/in/jackson-feist/',
+    github: '',
+    email: '',
+    phone: ''
+  },
+  ron: {
+    id: 'ron',
+    name: 'Ron Yosipovich',
+    title: 'Senior Software Engineer',
+    linkedin: 'https://www.linkedin.com/in/ronyosi/',
+    github: '',
+    email: '',
+    phone: ''
+  },
+  yuval: {
+    id: 'yuval',
+    name: 'Yuval Yakubov',
+    title: 'Senior Cloud Engineer',
+    linkedin: 'https://www.linkedin.com/in/yuval-yakubov/',
+    github: '',
+    email: '',
+    phone: ''
+  },
   tulio: {
     id: 'tulio',
     name: 'Tulio Fernandes',
